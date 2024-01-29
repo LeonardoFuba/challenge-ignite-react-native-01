@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "todo-list",
+    "name": "ToDo List",
     "slug": "todo-list",
     "version": "0.0.1",
     "orientation": "portrait",
@@ -15,16 +15,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "br.dev.leonascimento.toDoList",
+      "supportsTablet": false
     },
     "android": {
+      "package": "br.dev.leonascimento.toDoList",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0d0d0d"
-      }
+      },
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "19058fdd-18ae-400e-8f3a-5efecdcb2e05"
+      }
     }
   }
 }
