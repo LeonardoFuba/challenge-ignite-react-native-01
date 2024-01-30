@@ -34,7 +34,11 @@ export function Home() {
     Alert.alert("Remover", `Remover a tarefa "${name}"?`, [
       {
         text: "Sim",
-        onPress: () => setTasks(prevSate => prevSate.filter(task => task.name !== name))
+        onPress: () => setTasks(prevSate => { 
+          const newState = prevSate.filter(task => task.name !== name)
+          setTasksDoneCount(newState.filter(task => task.done).length)
+          return newState}
+        )
       },
       {
         text: "Não",
